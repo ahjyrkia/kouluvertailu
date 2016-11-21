@@ -21,6 +21,7 @@
     "angular": "^1.5.5",
     "bootstrap": "^3.3.6",
     "Ionicons": "ionicons#^2.0.1",
-    "font-awesome": "^4.6.3"
+    "font-awesome": "^4.6.3",
+    "angular-pageslide-directive": "^2.1.1"
   }
 }

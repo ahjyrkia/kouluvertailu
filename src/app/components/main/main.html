@@ -1,8 +1,19 @@
-<div>
-  <nav-top></nav-top>
-  <main class="container">
-    <aside>
-    </aside>
-    <div ui-view></div>
-  </main>
+<div id="mapid" style="height:680px;">
+    <div id="panelcontainer"></div>
+</div>
+
+<a id="button" class="button" href="" ng-click="openPanel()"></a>
+<div id="ps" pageslide ps-size="33%" ps-open="checked" ps-container="panelcontainer" ps-click-outside="false">
+    <div style="padding:20px" id="demo-right">
+            <h2 id="school">{{school}}</h2>
+            <p>{{address}}</p>
+            <p>{{rank}}</p>
+            <p>{{averagepts}}</p>
+        <div ng-hide="loading" class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+        <a ng-click="closePanel()" class="button">Sulje</a>
+    </div>
 </div>

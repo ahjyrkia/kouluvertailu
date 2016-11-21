@@ -1,7 +1,7 @@
-var MyApp = angular.module("MyApp", ["ui.router"]);
+var MyApp = angular.module("MyApp", ["ui.router","pageslide-directive"]);
 
 MyApp.config(function($stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.otherwise("/intro");
+  $urlRouterProvider.otherwise("/koulut");
 
   $stateProvider
     .state("main", {
@@ -11,15 +11,7 @@ MyApp.config(function($stateProvider, $urlRouterProvider) {
       controllerAs: "main"
     })
     .state("main.intro", {
-      url: "intro",
+      url: "koulut",
       templateUrl: "templates/intro/intro.html",
-    })
-    .state("main.login", {
-      url: "login",
-      templateUrl: "templates/login/login.html",
-    })
-    .state("main.other", {
-      url: "other",
-      templateUrl: "templates/other/other.html",
     })
 });

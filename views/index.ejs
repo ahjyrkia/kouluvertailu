@@ -1,27 +1,36 @@
 <!DOCTYPE HTML>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <title>My app</title>
-    
-    <link rel="stylesheet" href="bower/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bower/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bower/Ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://marslan390.github.io/BeautifyMarker/leaflet-beautify-marker-icon.css" />
 
     <link rel="stylesheet" href="styles.css">
-  </head>
-  <body ng-app="MyApp">
+</head>
+
+<body ng-app="MyApp">
     <div ui-view id="app"></div>
 
     <script src="bower/jquery/dist/jquery.min.js"></script>
     <script src="bower/angular/angular.min.js"></script>
     <script src="bower/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="bower/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower/angular-pageslide-directive/dist/angular-pageslide-directive.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+    <script src="https://marslan390.github.io/BeautifyMarker/leaflet-beautify-marker-icon.js"></script>
+    <script src="https://marslan390.github.io/BeautifyMarker/leaflet-beautify-marker.js"></script>
+
 
     <script>
-      window.env = <%- JSON.stringify(env) %>
+        window.env = <%- JSON.stringify(env) %>
     </script>
 
     <script src="app.min.js"></script>
-  </body>
+</body>
+
 </html>
