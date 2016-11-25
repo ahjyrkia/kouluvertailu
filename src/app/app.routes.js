@@ -1,4 +1,4 @@
-var MyApp = angular.module("MyApp", ["ui.router","pageslide-directive"]);
+var MyApp = angular.module("MyApp", ["ui.router","pageslide-directive","chart.js"]);
 
 MyApp.config(function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise("/koulut");

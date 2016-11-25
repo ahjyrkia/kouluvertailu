@@ -31,16 +31,18 @@ html {
 }
 #panelcontainer {
     top: 2%;
-    height: 60%;
-    max-height: 400px;
+    height: 70%;
+    max-height: 550px;
     border-radius: 25px;
     color: white;
     position: absolute;
 }
-
+#school {
+  font-size:150%;
+}
 .button {
     position: absolute;
-    top: 90%;
+    top: 95%;
 }
 
 /*body.ng-pageslide-body-open::before {
