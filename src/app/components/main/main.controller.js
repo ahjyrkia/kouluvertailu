@@ -27,6 +27,7 @@ MyApp.controller("MainController", function($scope, ApiService, MapService, Char
                     $scope.pointdata = schoolRequirements[3];
                     $scope.labels = schoolRequirements[0];
                     $scope.series = schoolRequirements[2];
+                    console.log($scope.pointdata, $scope.gradedata);
                     if ($scope.pointdata.length == 0) {
                         $scope.hidePoints = true;
                     } else {
