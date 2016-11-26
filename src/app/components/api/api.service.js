@@ -15,7 +15,7 @@ MyApp.service("ApiService", function($http) {
       })
   }
   this.getSchool = function(id) {
-    return $http.get("http://localhost:3332/school/"+id)
+    return $http.get(window.env.API_URL+"/school/"+id)
       .then(function (response) {
         return response.data;
       })
