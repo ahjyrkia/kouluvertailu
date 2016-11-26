@@ -4,16 +4,6 @@ MyApp.service("ApiService", function($http) {
     return 0;
   }
 
-  this.getItems = function() {
-    return $http.get("http://www.hel.fi/palvelukarttaws/rest/v2/service/26972")
-      .then(function (response) {
-        return response.data;
-      })
-      .catch(function (err) {
-        console.error("Error ApiService getItems ", err);
-        return {};
-      })
-  }
   this.getSchool = function(id) {
     return $http.get(window.env.API_URL+"/school/"+id)
       .then(function (response) {
