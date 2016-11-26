@@ -16,8 +16,7 @@ MyApp.service("ApiService", function($http) {
   }
 
   this.getSchoolFromDB = function(id) {
-
-    console.log(window.env.API_URL+"/school/db/"+id);
+    // console.log(window.env.API_URL+"/school/db/"+id);
     return $http.get(window.env.API_URL+"/school/db/"+id)
       .then(function (response) {
         return response.data;

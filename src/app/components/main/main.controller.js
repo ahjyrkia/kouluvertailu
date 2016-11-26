@@ -12,6 +12,8 @@ MyApp.controller("MainController", function($scope, ApiService, MapService, Char
     for (var i = 0; i < $scope.highSchoolMarkers.length; i++) {
         $scope.highSchoolMarkers[i].on('click', function(e) {
             var thisMarker = this;
+            $scope.hidePanel = true;
+            $scope.hideLoading = false;
             // $scope.toggle(); not working. temporary fix below
             document.getElementById("button").click();
             ApiService.getSchool(thisMarker.schoolId).then(function(data) {
@@ -27,7 +29,6 @@ MyApp.controller("MainController", function($scope, ApiService, MapService, Char
                     $scope.pointdata = schoolRequirements[3];
                     $scope.labels = schoolRequirements[0];
                     $scope.series = schoolRequirements[2];
-                    console.log($scope.pointdata, $scope.gradedata);
                     if ($scope.pointdata.length == 0) {
                         $scope.hidePoints = true;
                     } else {
@@ -38,6 +39,8 @@ MyApp.controller("MainController", function($scope, ApiService, MapService, Char
                     } else {
                         $scope.hideGrades = false;
                     }
+                    $scope.hideLoading = true;
+                    $scope.hidePanel = false;
                 })
             })
 
