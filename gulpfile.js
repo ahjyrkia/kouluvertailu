@@ -6,5 +6,5 @@ if (process.env.NODE_ENV !== "production") {
   .map(file => require("./gulp/" + file));
 } else {
   // change this if you want to use other gulp files when you build your app
-  require("./gulp/build:prod");
+  require("./gulp/build-prod");
 }
