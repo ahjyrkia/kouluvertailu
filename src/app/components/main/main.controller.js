@@ -1,5 +1,6 @@
 MyApp.controller("MainController", function($scope, ApiService, MapService, ChartService) {
     $scope.map = L.map('mapid').setView([60.172, 24.946], 13);
+    angular.element("#mapid").css('height', window.innerHeight -20 +"px");
     L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
         subdomains: 'abcd',

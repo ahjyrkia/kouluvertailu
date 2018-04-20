@@ -17,7 +17,7 @@ MyApp.service("MapService", function($http) {
                 spin: 'false',
                 innerIconStyle: 'margin-top:0.2px'
             };
-            var marker = L.BeautifyMarker.marker([lng, lat], {
+            var marker = L.marker([lng, lat], {
                 icon: L.BeautifyIcon.icon(options),
             });
             marker.schoolId = schools[i].id;
